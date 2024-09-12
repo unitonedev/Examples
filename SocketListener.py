@@ -6,6 +6,7 @@ import time
 
 context = zmq.Context()
 socket = context.socket(zmq.SUB)
+# Set your U1 kit ip-address here
 socket.connect("tcp://192.168.43.148:5555")
 
 socket.setsockopt_string(zmq.SUBSCRIBE, '')
@@ -119,7 +120,7 @@ while True:
         dd = 40
         sc = 0.8
 
-        cv2.putText(frame, "Est: "+str(J["EstAlt"])+", LAlt: "+str(J["lastAlt"])+", G0: ", 
+        cv2.putText(frame, "Estimated Alt: "+str(J["EstAlt"]), 
                           (50, 25), cv2.FONT_HERSHEY_SIMPLEX, sc, (255,255,255), 2, cv2.LINE_AA)
 
         cv2.putText(frame, "rRol: "+str(J["RC"][0]), (50, 50), cv2.FONT_HERSHEY_SIMPLEX, sc, (255,255,255), 2, cv2.LINE_AA)
