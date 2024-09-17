@@ -1,0 +1,7 @@
+To compile:
+cd /home/orangepi/cm2/staff/examples/simpleAP
+g++ -shared -o simpleap.so -I/usr/include/opencv4 -Iinclude/ -fPIC simpleap.cpp
+
+To enable in production:
+modify file config.ini, set:
+externalAutoPilotPath = /home/orangepi/cm2/staff/examples/simpleAP/simpleap.so

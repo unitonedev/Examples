@@ -1,0 +1,7 @@
+To compile:
+cd /home/orangepi/cm2/staff/examples/TcpStreamer
+g++ -shared -o tcpstreamer.so -I/usr/include/opencv4 -lzmq -fPIC tcpstreamer.cpp
+
+To enable in production:
+modify file config.ini, set:
+externalStreamerPath = /home/orangepi/cm2/staff/examples/TcpStreamer/tcpstreamer.so

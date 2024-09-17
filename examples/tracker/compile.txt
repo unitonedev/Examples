@@ -1,0 +1,7 @@
+To compile:
+cd /home/orangepi/cm2/staff/examples/tracker/
+g++ -shared -o tracker.so -I/usr/include/opencv4 -fPIC tracker.cpp
+
+To enable in production:
+modify file config.ini, in section [Tracker], set:
+externalTrackerPath = /home/orangepi/cm2/staff/examples/tracker/tracker.so

@@ -1,0 +1,7 @@
+To compile:
+cd /home/orangepi/cm2/staff/examples/moreAdvancedAP
+g++ -shared -o appid.so -I/usr/include/opencv4 -Iinclude/ -fPIC appid.cpp
+
+To enable in production:
+modify file config.ini, set:
+externalAutoPilotPath = /home/orangepi/cm2/staff/examples/moreAdvancedAP/appid.so
