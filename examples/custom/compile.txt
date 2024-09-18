@@ -1,0 +1,7 @@
+To compile:
+cd /home/orangepi/cm2/staff/examples/custom/
+g++ -shared -o custom.so -I/usr/local/include/opencv4 -lzmq -fPIC custom.cpp
+
+To enable in production:
+modify file config.ini, in section [Custom], set:
+externalCustomModulePath = /home/orangepi/cm2/staff/examples/custom/custom.so
