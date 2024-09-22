@@ -81,10 +81,7 @@ def drawBBHistory(frame, BBHistory):
 
             i += 1
 
-vvr = cv2.VideoWriter(time.strftime("%Y%m%d-%H%M%S.avi"),  
-                         cv2.VideoWriter_fourcc(*'MJPG'), 
-                         10, (720,576))
-
+vvr = None  # Initialize vvr as None initially
 p1prev = None
 p2prev = None
 
@@ -109,6 +106,10 @@ while True:
     if frame is not None:
         if not (centerSet):
             setCenter(frame.shape[1], frame.shape[0])
+        if vvr is None:
+            vvr = cv2.VideoWriter(time.strftime("%Y%m%d-%H%M%S.avi"),  
+                         cv2.VideoWriter_fourcc(*'MJPG'), 
+                         10, (frame.shape[1],frame.shape[0]))
 
         color = (255, 0, 0)
         cv2.line(frame, (0, CY), (W, CY), color, 2)
