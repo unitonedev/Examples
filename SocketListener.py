@@ -141,7 +141,7 @@ while True:
         cv2.putText(frame, "oYaw: "+str(J["RCOver"][2]), (50, 300+dd*2), cv2.FONT_HERSHEY_SIMPLEX, sc, (255,255,255), 2, cv2.LINE_AA)
         cv2.putText(frame, "oThr: "+str(J["RCOver"][3]), (50, 300+dd*3), cv2.FONT_HERSHEY_SIMPLEX, sc, (255,255,255), 2, cv2.LINE_AA)
 
-        cv2.putText(frame, "FPS "+str(J["tFPS"]), (550, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,255,255), 2, cv2.LINE_AA)
+        cv2.putText(frame, "FPS "+str(J["tFPS"]), (500, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,255,255), 2, cv2.LINE_AA)
 
         color = (0,255, 0)
         if mode == 1: 
