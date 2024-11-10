@@ -1,0 +1,7 @@
+To compile:
+cd /home/orangepi/cm2/staff/examples/capture/
+g++ -shared -o capture.so -I/usr/local/include/opencv4 -fPIC capture.cpp
+
+To enable in production:
+modify file config.ini, in section [OverAll], set:
+externalCapturePath = /home/orangepi/cm2/staff/examples/capture/capture.so
